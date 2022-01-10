@@ -71,4 +71,27 @@ public class CountryDAOImpl implements CountryDAO {
 		}
 	}
 
+	@Override
+	public void deleteById(int Id) {
+		System.out.println("invoked the delete row");
+		System.out.println(Id);
+		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml")
+				.addAnnotatedClass(CountryEntity.class).buildSessionFactory();
+		if (factory != null) {
+			Session session = factory.openSession();
+			Transaction transaction = session.beginTransaction();
+			CountryEntity entity = session.get(CountryEntity.class, Id);
+			if (entity != null) {
+				entity.setId(Id);
+				session.delete(entity);
+				transaction.commit();
+				System.out.println("delete entity id:" + Id);
+			} else {
+				System.out.println("not delete");
+			}
+			session.close();
+		}
+		factory.close();
+	}
+
 }

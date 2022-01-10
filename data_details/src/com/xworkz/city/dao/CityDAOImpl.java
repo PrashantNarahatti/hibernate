@@ -6,6 +6,7 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import com.xworkz.city.entity.CityEntity;
+import com.xworkz.company.entity.CompanyEntity;
 
 public class CityDAOImpl implements CityDAO {
 	@Override
@@ -69,6 +70,29 @@ public class CityDAOImpl implements CityDAO {
 			}
 			factory.close();
 		}
+	}
+
+	@Override
+	public void deleteById(int Id) {
+		System.out.println("invoked the delete row");
+		System.out.println(Id);
+		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml")
+				.addAnnotatedClass(CityEntity.class).buildSessionFactory();
+		if (factory != null) {
+			Session session = factory.openSession();
+			Transaction transaction = session.beginTransaction();
+			CityEntity entity = session.get(CityEntity.class, Id);
+			if (entity != null) {
+				entity.setId(Id);
+				session.delete(entity);
+				transaction.commit();
+				System.out.println("delete entity id:" + Id);
+			} else {
+				System.out.println("not delete");
+			}
+			session.close();
+		}
+		factory.close();
 	}
 
 }

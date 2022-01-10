@@ -25,7 +25,8 @@ public class PatientScammer {
 		//PatientEntity idEntity=dao.getById(5);
 		//System.out.println(idEntity);
 		
-		dao.updateBirthPlaceById("Mysore", 0);
+		//dao.updateBirthPlaceById("Mysore :", 2);
+		dao.deleteById(1);
 	}
 
 }

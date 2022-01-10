@@ -6,6 +6,7 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import com.xworkz.company.entity.CompanyEntity;
+import com.xworkz.country.entity.CountryEntity;
 
 public class CompanyDAOImpl implements CompanyDAO {
 
@@ -73,23 +74,26 @@ public class CompanyDAOImpl implements CompanyDAO {
 	}
 
 	@Override
-	public void deleteById(int id) {
-
-		CompanyEntity entity = null;
-		System.out.println("invoked deleteById");
-		System.out.println("id passed as arg :" + id);
-		Configuration configuration = new Configuration().configure("hibernate.cfg.xml")
-				.addAnnotatedClass(CompanyEntity.class);
-		SessionFactory factory = configuration.buildSessionFactory();
+	public void deleteById(int Id) {
+		System.out.println("invoked the delete row");
+		System.out.println(Id);
+		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml")
+				.addAnnotatedClass(CompanyEntity.class).buildSessionFactory();
 		if (factory != null) {
 			Session session = factory.openSession();
-			entity = session.get(CompanyEntity.class, id);
+			Transaction transaction = session.beginTransaction();
+			CompanyEntity entity = session.get(CompanyEntity.class, Id);
 			if (entity != null) {
-				System.out.println("entity is found");
+				entity.setId(Id);
+				session.delete(entity);
+				transaction.commit();
+				System.out.println("delete entity id:" + Id);
 			} else {
-				System.out.println("entity is not found");
+				System.out.println("not delete");
 			}
+			session.close();
 		}
-
+		factory.close();
 	}
+
 }

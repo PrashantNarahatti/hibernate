@@ -23,7 +23,8 @@ public class CountryScammer {
 		//CountryEntity entity=dao.getById(2);
 		//System.out.println(entity);
 
-		dao.updateContinentById("Europe :", 5);
+		//dao.updateContinentById("Europe :", 5);
+		dao.deleteById(1);
 
 	}
 

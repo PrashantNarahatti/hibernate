@@ -24,7 +24,8 @@ public class StateScammer {
 		 //StateEntity entity=dao.getById(2);
 		 //System.out.println(entity);
 
-		dao.updateCapitalCityById("Chandigarh :", 2);
+		//dao.updateCapitalCityById("Chandigarh :", 2);
+		dao.deleteById(1);
 	}
 
 }

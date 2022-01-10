@@ -24,7 +24,8 @@ public class CityScammer {
 		 //CityEntity entity=dao.getById(2);
 		 //System.out.println(entity);
 
-		dao.updateFamousForById("Rice :", 5);
+		//dao.updateFamousForById("Rice :", 5);
+		dao.deleteById(2);
 	}
 
 }
