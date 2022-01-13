@@ -1,16 +1,15 @@
-package com.xworkz.tourist.dao;
+package com.xworkz.medicine.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 
-import com.xworkz.tourist.entity.TouristEntity;
+import com.xworkz.medicine.entity.MedicineEntity;
 import com.xworkz.util.EMFUtil;
 
-public class TouristDAOImpl implements TouristDAO {
-
+public class MedicineDAOImpl implements MedicineDAO {
 	@Override
-	public void put(TouristEntity entity) {
+	public void put(MedicineEntity entity) {
 		EntityManagerFactory entityManagerFactory = EMFUtil.getEntityManagerFactory();
 		EntityManager manager = entityManagerFactory.createEntityManager();
 		EntityTransaction tx = manager.getTransaction();

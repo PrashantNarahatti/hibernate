@@ -1,4 +1,4 @@
-package com.xworkz.tourist.entity;
+package com.xworkz.railwayStation.entity;
 
 import java.io.Serializable;
 

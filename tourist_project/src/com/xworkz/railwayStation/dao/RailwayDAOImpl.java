@@ -1,16 +1,15 @@
-package com.xworkz.tourist.dao;
+package com.xworkz.railwayStation.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 
-import com.xworkz.tourist.entity.TouristEntity;
+import com.xworkz.railwayStation.entity.RailwayStationEntity;
 import com.xworkz.util.EMFUtil;
 
-public class TouristDAOImpl implements TouristDAO {
-
+public class RailwayDAOImpl implements RailwayStationDAO{
 	@Override
-	public void put(TouristEntity entity) {
+	public void put(RailwayStationEntity entity) {
 		EntityManagerFactory entityManagerFactory = EMFUtil.getEntityManagerFactory();
 		EntityManager manager = entityManagerFactory.createEntityManager();
 		EntityTransaction tx = manager.getTransaction();
@@ -19,5 +18,6 @@ public class TouristDAOImpl implements TouristDAO {
 		tx.commit();
 
 	}
+
 
 }

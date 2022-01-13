@@ -1,4 +1,4 @@
-package com.xworkz.tourist.util;
+package com.xworkz.util;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

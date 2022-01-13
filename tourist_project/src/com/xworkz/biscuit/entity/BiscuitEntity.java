@@ -1,4 +1,5 @@
-package com.xworkz.tourist.entity;
+package com.xworkz.biscuit.entity;
+
 import java.io.Serializable;
 
 import javax.persistence.Column;
