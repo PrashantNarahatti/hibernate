@@ -48,6 +48,8 @@ public class WebsitScammer {
 		dao.save(entity18);
 		dao.save(entity19);
 		dao.save(entity20);
+		
+		
 
 	}
 
