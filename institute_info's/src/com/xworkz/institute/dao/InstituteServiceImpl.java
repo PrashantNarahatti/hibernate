@@ -1,95 +1,151 @@
 package com.xworkz.institute.dao;
 
+import javax.persistence.PersistenceException;
+
 
 import com.xworkz.institute.entity.InstituteEntity;
 
 public class InstituteServiceImpl implements InstituteService {
 
 	private InstituteDAO dao;
+
+	public InstituteServiceImpl(InstituteDAO dao) {
+		super();
+		this.dao = dao;
+	}
 	
-public InstituteServiceImpl(InstituteDAO dao) {
-	super();
-	this.dao=dao;
-}	
 
 	@Override
-	public void validateAndSave(InstituteEntity entity) {
-		if (entity.getName() != null && entity.getName().isEmpty() && entity.getName().length() > 3
-				&& entity.getName().length() < 25) {
-			dao.save(entity);
-		}
+	public boolean validateAndSave(InstituteEntity entity) {
+		boolean valid=false;
 
-		if (entity.getOwner() != null && entity.getOwner().isEmpty() && entity.getOwner().length() > 3
-				&& entity.getOwner().length() < 25) {
-			dao.save(entity);
-		}
+		
+		
+			if (entity.getName() != null && entity.getName().isEmpty() && entity.getName().length() > 3
+					&& entity.getName().length() < 25) {
 
-		if (entity.getHrName() != null && entity.getHrName().isEmpty() && entity.getHrName().length() > 3
-				&& entity.getHrName().length() < 25) {
-			dao.save(entity);
-		}
+			} else {
+				System.out.println("invalid name");
+				
+				
+			}
 
-		if (entity.getEmail() != null && entity.getEmail().isEmpty() && entity.getEmail().length() > 3
-				&& entity.getEmail().length() < 25) {
-			dao.save(entity);
-		}
+			if (entity.getOwner() != null && entity.getOwner().isEmpty() && entity.getOwner().length() > 3
+					&& entity.getOwner().length() < 25) {
 
-		if (entity.getPhoneNo() > 0 && entity.getPhoneNo() <= 5000000000d) {
-			dao.save(entity);
-		}
+			} else {
+				System.out.println("invalid owner");
+				return false;
+			}
+			if (entity.getHrName() != null && entity.getHrName().isEmpty() && entity.getHrName().length() > 3
+					&& entity.getHrName().length() < 25) {
+			} else {
+				System.out.println("invalid HR name");
+				
+			}
 
-		if (entity.getLocation() != null && entity.getLocation().isEmpty() && entity.getLocation().length() > 3
-				&& entity.getLocation().length() < 25) {
-			dao.save(entity);
-		}
+			if (entity.getEmail() != null && entity.getEmail().isEmpty() && entity.getEmail().length() > 3
+					&& entity.getEmail().length() < 25) {
+			} else {
+				System.out.println("invalid email");
+			
+			}
 
-		if (entity.getStarted() > 0 && entity.getStarted() <= 500000d) {
-			dao.save(entity);
-		}
+			if (!(entity.getPhoneNo() < 3) && !(entity.getPhoneNo() > 1000000000)){
 
-		if (entity.getCourseName() != null && entity.getCourseName().isEmpty() && entity.getCourseName().length() > 3
-				&& entity.getCourseName().length() < 25) {
-			dao.save(entity);
-		}
+			} else {
+				System.out.println("invalid phoneNo");
+			
+			}
+			if (entity.getLocation() != null && entity.getLocation().isEmpty() && entity.getLocation().length() > 3
+					&& entity.getLocation().length() < 25) {
+			} else {
+				System.out.println("invalid location");
+				
+			}
 
-		if (entity.getCourseInMonths() > 0 && entity.getCourseInMonths() <= 500) {
-			dao.save(entity);
-		}
+			if (!(entity.getStarted() <3) && !(entity.getStarted() > 500000) ){
 
-		if (entity.getNoOfTrainies() > 0 && entity.getNoOfTrainies() <= 50000) {
-			dao.save(entity);
-		}
+			} else {
+				System.out.println("invalid started");
+				
+			}
 
-		if (entity.getNoOfTrainers() > 0 && entity.getNoOfTrainers() <= 500000) {
-			dao.save(entity);
-		}
-		if (entity.getNoOfBranches() > 0 && entity.getNoOfBranches() <= 500000) {
-			dao.save(entity);
-		}
-		if (entity.getRating() > 0 && entity.getRating() <= 500000.0f) {
-			dao.save(entity);
-		}
-		if (entity.getFees() > 0 && entity.getFees() <= 50000d) {
-			dao.save(entity);
-		}
+			if (entity.getCourseName() != null && entity.getCourseName().isEmpty()
+					&& entity.getCourseName().length() > 3 && entity.getCourseName().length() < 25) {
+			} else {
+				System.out.println("invalid course name");
+			
+			}
 
-		if (entity.getUpdatedAt() != null) {
-			dao.save(entity);
-		}
+			if (!(entity.getCourseInMonths() < 3) && !(entity.getCourseInMonths() > 500000)) {
+			} else {
+				System.out.println("invalid courseInManths");
+		
+			}
 
-		if (entity.getUpdatedBy() != null && entity.getUpdatedBy().isEmpty() && entity.getUpdatedBy().length() > 3
-				&& entity.getUpdatedBy().length() < 25) {
-			dao.save(entity);
-		}
+			if (!(entity.getNoOfTrainies() <3) && !(entity.getNoOfTrainies() > 50000)) {
+			} else {
+				System.out.println("invalid No of trainies");
+			
+			}
 
-		if (entity.getCratedBy() != null && entity.getCratedBy().isEmpty() && entity.getCratedBy().length() > 3
-				&& entity.getCratedBy().length() < 25) {
-			dao.save(entity);
-		}
-		if (entity.getCratedAt() != null) {
-			dao.save(entity);
-		}
+			if (!(entity.getNoOfTrainers() <3) && !(entity.getNoOfTrainers() > 500000)) {
+			} else {
+				System.out.println("invalid No of Trainers");
+			
+			}
 
-	}
+			if (!(entity.getNoOfBranches() <3) && !(entity.getNoOfBranches() > 500000)) {
+			} else {
+				System.out.println("invalid No of branches");
+			
+			}
 
+			if (!(entity.getRating() <3) && !(entity.getRating() > 500000)) {
+			} else {
+				System.out.println("invalid rating");
+		
+			}
+
+			if (!(entity.getFees() <3) && !(entity.getFees() > 500000)) {
+			} else {
+				System.out.println("invalid fees");
+			
+			}
+
+			if (entity.getUpdatedAt() != null) {
+			} else {
+				System.out.println("invalid updated");
+				
+			}
+
+			if (entity.getUpdatedBy() != null && entity.getUpdatedBy().isEmpty() && entity.getUpdatedBy().length() > 3
+					&& entity.getUpdatedBy().length() < 25) {
+			} else {
+				System.out.println("invalid updatedBy");
+			
+			}
+
+			if (entity.getCratedBy() != null && entity.getCratedBy().isEmpty() && entity.getCratedBy().length() > 3
+					&& entity.getCratedBy().length() < 25) {
+			} else {
+				System.out.println("invalid createdBy");
+			
+			}
+
+			if (entity.getCratedAt() != null) {
+			} else {
+				System.out.println("invalid createdAt");
+				
+				
+			}
+			
+			if(valid)dao.save(entity);
+		
+			return false;
+
+	
+		}
 }
+	

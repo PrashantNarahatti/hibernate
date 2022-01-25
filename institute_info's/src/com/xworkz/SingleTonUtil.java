@@ -11,8 +11,8 @@ public class SingleTonUtil {
 		return entityManagerFactory;
 	}
 	static {
-		System.out.println("invoked the presistence file ");
+		
 		entityManagerFactory = Persistence.createEntityManagerFactory("com.xworkz");
-		System.out.println("saving data");
+	
 	}
 }

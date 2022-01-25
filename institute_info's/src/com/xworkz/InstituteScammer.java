@@ -11,7 +11,7 @@ import com.xworkz.institute.entity.InstituteEntity;
 public class InstituteScammer {
 
 	public static void main(String[] args) {
-		InstituteEntity entity=new InstituteEntity("X-workz-ODC BTM","Mr.Omkar","Mr.Vinay","contact@x-workz.in",9886971480d,"BTM Layout",2019,"java full stack",5,37,5,2,4.5f,20000d,LocalDateTime.now(),"Pranu","Pacchu",LocalDateTime.now());
+		InstituteEntity entity=new InstituteEntity("X-workz-ODC BTM",null,"Mr.Vinay","contact@x-workz.in",9886971480d,"BTM Layout",2019,"java full stack",5,37,5,2,4.5f,20000d,LocalDateTime.now(),"Pranu","Pacchu",LocalDateTime.now());
 		InstituteEntity entity1=new InstituteEntity("X-workz-ODC","Mr.Omkar","Mr.Akshara","contact@x-workz.in",9886971483d,"Rajajinagar",2017,"java full stack",5,60,8,2,7.5f,20000d,LocalDateTime.now(),"Pranu","Pacchu",LocalDateTime.now());
 		InstituteEntity entity2=new InstituteEntity("QSpiders Rajajinagar","Mr.Girish","Mr.Ajith Kumar","contact@qspiders.in",9972655088d,"Rajajinagar",2010,"java full stack",6,150,8,3,5.5f,34000d,LocalDateTime.now(),"Pranu","Pacchu",LocalDateTime.now());
 		InstituteEntity entity3=new InstituteEntity("JSpiders Rajajinagar","Mr.Girish","Ms.Akshatha Acchu","contact@jspiders.in",9972655088d,"Rajajinagar",2012,"java full stack",6,120,8,2,4.5f,36000d,LocalDateTime.now(),"Pranu","Pacchu",LocalDateTime.now());
@@ -28,39 +28,38 @@ public class InstituteScammer {
 		InstituteEntity entity14=new InstituteEntity("Upshot Technology ","Mr.Narasimha Swamy","Mr.Rikin Valambia","contact@upshot.in",8095570001d,"BTM Layout",2015,"java full stack",6,120,8,2,4.5f,36000d,LocalDateTime.now(),"Pranu","Pacchu",LocalDateTime.now());
 		
 		InstituteDAO dao=new InstituteDAOImpl() ;
-		dao.save(entity);
-		dao.save(entity1);
-		dao.save(entity2);
-		dao.save(entity3);
-		dao.save(entity4);
-		dao.save(entity5);
-		dao.save(entity6);
-		dao.save(entity7);
-		dao.save(entity8);
-		dao.save(entity9);
-		dao.save(entity10);
-		dao.save(entity11);
-		dao.save(entity12);
-		dao.save(entity13);
-		dao.save(entity14);
+//		dao.save(entity1);
+//		dao.save(entity2);
+//		dao.save(entity3);
+//		dao.save(entity4);
+//		dao.save(entity5);
+//		dao.save(entity6);
+//		dao.save(entity7);
+//		dao.save(entity8);
+//		dao.save(entity9);
+//		dao.save(entity10);
+//		dao.save(entity11);
+//		dao.save(entity12);
+//		dao.save(entity13);
+//		dao.save(entity14);
 		
 	InstituteService daoS=new InstituteServiceImpl(dao);
 	daoS.validateAndSave(entity);
-	daoS.validateAndSave(entity1);
-	daoS.validateAndSave(entity2);
-	daoS.validateAndSave(entity3);
-	daoS.validateAndSave(entity4);
-	daoS.validateAndSave(entity5);
-	daoS.validateAndSave(entity6);
-	daoS.validateAndSave(entity7);
-	daoS.validateAndSave(entity8);
-	daoS.validateAndSave(entity9);
-	daoS.validateAndSave(entity10);
-	daoS.validateAndSave(entity11);
-	daoS.validateAndSave(entity12);
-	daoS.validateAndSave(entity13);
-	daoS.validateAndSave(entity14);
-	
+//	daoS.validateAndSave(entity1);
+//	daoS.validateAndSave(entity2);
+//	daoS.validateAndSave(entity3);
+//	daoS.validateAndSave(entity4);
+//	daoS.validateAndSave(entity5);
+//	daoS.validateAndSave(entity6);
+//	daoS.validateAndSave(entity7);
+//	daoS.validateAndSave(entity8);
+//	daoS.validateAndSave(entity9);
+//	daoS.validateAndSave(entity10);
+//	daoS.validateAndSave(entity11);
+//	daoS.validateAndSave(entity12);
+//	daoS.validateAndSave(entity13);
+//	daoS.validateAndSave(entity14);
+//	
 		
 	}
 
