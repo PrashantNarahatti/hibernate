@@ -1,6 +1,9 @@
 package com.xworkz.institute.entity;
 import java.io.Serializable;
+import java.time.LocalDateTime;
+
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,6 +19,7 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @Table(name = "institute_table")
+@Entity
 public class InstituteEntity implements Serializable 
 {
 
@@ -51,10 +55,19 @@ public class InstituteEntity implements Serializable
 	private float rating;
 	@Column(name = "fees")
 	private double fees;
-
+	@Column(name = "updatedAt")
+	private  LocalDateTime updatedAt;
+	@Column(name = "updatedBy")
+	private String updatedBy;
+	@Column(name = "cratedBy")
+	private String cratedBy;
+	@Column(name = "cratedAt")
+	private LocalDateTime cratedAt;
+	
 	public InstituteEntity(String name, String owner, String hrName, String email, double phoneNo, String location,
 			double started, String courseName, int courseInMonths, int noOfTrainies, int noOfTrainers, int noOfBranches,
-			float rating, double fees) {
+			float rating, double fees, LocalDateTime updatedAt, String updatedBy, String cratedBy,
+			LocalDateTime cratedAt) {
 		super();
 		this.name = name;
 		this.owner = owner;
@@ -70,6 +83,14 @@ public class InstituteEntity implements Serializable
 		this.noOfBranches = noOfBranches;
 		this.rating = rating;
 		this.fees = fees;
+		this.updatedAt = updatedAt;
+		this.updatedBy = updatedBy;
+		this.cratedBy = cratedBy;
+		this.cratedAt = cratedAt;
 	}
+	
+
+	
+	
 
 }
