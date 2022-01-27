@@ -11,7 +11,7 @@ import com.xworkz.institute.entity.InstituteEntity;
 public class InstituteScammer {
 
 	public static void main(String[] args) {
-		InstituteEntity entity=new InstituteEntity("X-workz-ODC BTM",null,"Mr.Vinay","contact@x-workz.in",9886971480d,"BTM Layout",2019,"java full stack",5,37,5,2,4.5f,20000d,LocalDateTime.now(),"Pranu","Pacchu",LocalDateTime.now());
+		InstituteEntity entity=new InstituteEntity("X-workz-ODC BTM","Mr.Omkar","Mr.Vinay","contact@x-workz.in",9886971480d,"BTM Layout",2019,"java full stack",5,37,5,2,4.5f,20000d,LocalDateTime.now(),"Pranu","Pacchu",LocalDateTime.now());
 		InstituteEntity entity1=new InstituteEntity("X-workz-ODC","Mr.Omkar","Mr.Akshara","contact@x-workz.in",9886971483d,"Rajajinagar",2017,"java full stack",5,60,8,2,7.5f,20000d,LocalDateTime.now(),"Pranu","Pacchu",LocalDateTime.now());
 		InstituteEntity entity2=new InstituteEntity("QSpiders Rajajinagar","Mr.Girish","Mr.Ajith Kumar","contact@qspiders.in",9972655088d,"Rajajinagar",2010,"java full stack",6,150,8,3,5.5f,34000d,LocalDateTime.now(),"Pranu","Pacchu",LocalDateTime.now());
 		InstituteEntity entity3=new InstituteEntity("JSpiders Rajajinagar","Mr.Girish","Ms.Akshatha Acchu","contact@jspiders.in",9972655088d,"Rajajinagar",2012,"java full stack",6,120,8,2,4.5f,36000d,LocalDateTime.now(),"Pranu","Pacchu",LocalDateTime.now());
