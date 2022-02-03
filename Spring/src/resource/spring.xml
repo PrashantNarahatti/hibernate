@@ -18,4 +18,12 @@
 <bean id="tissue2" class="com.xworkz.laptop.Tissue"></bean>
 <bean id="oximeter" class="com.xworkz.laptop.Oximeter"></bean>
 <bean id="oximeter2" class="com.xworkz.laptop.Oximeter"></bean>
+<bean id="paint" class="com.xworkz.laptop.Paint"></bean>
+<bean id="paint2" class="com.xworkz.laptop.Paint"></bean>
+<bean id="mask" class="com.xworkz.laptop.Mask"></bean>
+<bean id="mask2" class="com.xworkz.laptop.Mask"></bean>
+<bean id="simcard" class="com.xworkz.laptop.Simcard"></bean>
+<bean id="simcard2" class="com.xworkz.laptop.Simcard"></bean>
+<bean id="juice" class="com.xworkz.laptop.Juice"></bean>
+<bean id="juice2" class="com.xworkz.laptop.Juice"></bean>
 </beans>
