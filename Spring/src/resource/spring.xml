@@ -10,4 +10,12 @@
 <bean id="sanitizer1" class="com.xworkz.laptop.Sanitizer"></bean>
 <bean id="tablet" class="com.xworkz.laptop.Tablet"></bean>
 <bean id="tablet2" class="com.xworkz.laptop.Tablet"></bean>
+<bean id="purifier" class="com.xworkz.laptop.Purifier"></bean>
+<bean id="purifier2" class="com.xworkz.laptop.Purifier"></bean>
+<bean id="steamer" class="com.xworkz.laptop.Steamer"></bean>
+<bean id="steamer2" class="com.xworkz.laptop.Steamer"></bean>
+<bean id="tissue" class="com.xworkz.laptop.Tissue"></bean>
+<bean id="tissue2" class="com.xworkz.laptop.Tissue"></bean>
+<bean id="oximeter" class="com.xworkz.laptop.Oximeter"></bean>
+<bean id="oximeter2" class="com.xworkz.laptop.Oximeter"></bean>
 </beans>
