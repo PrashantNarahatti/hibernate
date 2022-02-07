@@ -26,4 +26,42 @@
 <bean id="simcard2" class="com.xworkz.laptop.Simcard"></bean>
 <bean id="juice" class="com.xworkz.laptop.Juice"></bean>
 <bean id="juice2" class="com.xworkz.laptop.Juice"></bean>
+
+
+<bean id="charger2" class="com.xworkz.laptop.Charger">
+<constructor-arg value="MI"></constructor-arg>
+<constructor-arg value="1200"></constructor-arg>
+<property name="color" value="black"></property>
+<property name="volt" value="5"></property>
+<property name="working" value="true"></property>
+</bean>
+
+<bean id="solarWaterHeater" class="com.xworkz.laptop.SolarWaterHeater">
+<property name="capacity" value="10"></property>
+<property name="brand" value="sun king pro"></property>
+<property name="price" value="50000"></property>
+<property name="coldWater" value="true"></property>
+</bean>
+
+<bean id="toothPaste" class="com.xworkz.laptop.ToothPaste">
+<property name="salt" value="true"></property>
+</bean>
+
+<bean id="ups" class="com.xworkz.laptop.Ups">
+<constructor-arg value="Microtek"></constructor-arg>
+<constructor-arg value="Line-interactive"></constructor-arg>
+<property name="weight" value="10"></property>
+<property name="backupHours" value="12"></property>
+<property name="chargeHours" value="3"></property>
+</bean>
+
+<bean id="electricCookTop" class="com.xworkz.laptop.ElectricCookTop">
+<constructor-arg value="Bajaj Vacco 20000w"></constructor-arg>
+<constructor-arg value="black"></constructor-arg>
+<constructor-arg value="5"></constructor-arg>
+<constructor-arg value="3"></constructor-arg>
+<property name="wireLength" value="15"></property>
+<property name="customer" value="Pranu"></property>
+<property name="warranty" value="6"></property>
+</bean>
 </beans>
