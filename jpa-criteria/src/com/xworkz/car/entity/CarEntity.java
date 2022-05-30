@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "car_table")
+@Table(name = "btm.car_table")
 @Entity
 public class CarEntity implements Serializable {
 	

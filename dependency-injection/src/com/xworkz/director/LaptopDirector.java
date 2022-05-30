@@ -8,11 +8,11 @@ public class LaptopDirector {
 	public static void main(String[] args) {
 		Laptop laptop=new Laptop();
 		Camera camera=new Camera();
-		camera.pactureImage();
+		camera.captureImage();
 		String brand="Dell";
 		System.out.println(brand);
 		laptop.takePicture();
-
+ 
 	}
 
 }

@@ -4,8 +4,8 @@ public class Camera {
 	public Camera() {
 		System.out.println(this.getClass().getSimpleName().concat("invoked no args of camera"));
 	}
-	public void pactureImage() {
-		System.out.println("pacture images");
+	public void captureImage() {
+		System.out.println("capture images");
 	}
 
 }

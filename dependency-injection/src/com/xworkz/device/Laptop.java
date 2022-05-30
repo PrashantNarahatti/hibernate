@@ -24,7 +24,7 @@ public class Laptop {
 		System.out.println("shooting take Picture");
 
 	if(camera!=null) {
-		camera.pactureImage();
+		camera.captureImage();
 	}
 	else {
 		System.err.println("shooting is not take Picture");

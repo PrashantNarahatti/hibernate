@@ -7,7 +7,10 @@
 
 <bean id="laptop" class="com.xworkz.device.Laptop">
 <constructor-arg value="laptop"></constructor-arg>
-<property name="brand" ref="HP"></property>
 </bean>
+<bean id="camera" class="com.xworkz.device.Camera">
+<property name="brand" ref="laptop"></property>
+</bean>
+
 
 </beans>
