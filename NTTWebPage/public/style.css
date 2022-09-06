@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+
+body {
+	background-image: url("./images/cat.jpg");
+}
+
+h1 {
+	align-content: center;
+	color: red;
+}

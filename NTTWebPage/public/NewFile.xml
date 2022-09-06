@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:root xmlns:tns="http://www.example.org/employeesSchema" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.example.org/employeesSchema employeesSchema.xsd ">
+   <tns:employee eid="e1">
+   <tns:name>John</tns:name>
+   <tns:contact>9164768473</tns:contact>
+   <tns:department>IT</tns:department>
+ </tns:employee>
+  <tns:employee eid="e2">
+  <tns:name>Ram</tns:name>
+  <tns:contact>9164768473</tns:contact>
+  <tns:department>IT</tns:department>
+</tns:employee>
+</tns:root>

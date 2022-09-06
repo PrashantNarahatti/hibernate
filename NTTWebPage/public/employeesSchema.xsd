@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/employeesSchema" 
+xmlns:tns="http://www.example.org/employeesSchema" 
+elementFormDefault="qualified">
+
+<complexType name="employeestype">
+     <sequence>
+        <element name="employee" type="tns:employeestype" maxOccurs="3" minOccurs="1"></element>
+     </sequence>
+</complexType>
+<complexType name="employeetype">
+      <sequence>
+          <element name="name" type="string"></element>
+          <element name="contact" type="string"></element>
+          <element name="department" type="string"></element>
+      </sequence>
+      <attribute name="eid" type="ID" use="required"></attribute>
+      <attribute name="admin" type="boolean"></attribute>
+</complexType>
+<element name="root" type="tns:employeestype"></element>
+</schema>

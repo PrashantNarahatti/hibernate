@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employees SYSTEM "employeeType.dtd">
+<employees>
+    <employee eid="e1" admin="true">
+       <name>John</name>
+       <contact>9164768473</contact>
+       <department>Sales</department>
+    </employee>
+     <employee eid="e2" admin="false">
+       <name>Ram</name>
+       <contact>9164768473</contact>
+       <department>IT</department>
+    </employee>
+     <employee eid="e3" admin="false">
+       <name>Pacchu</name>
+       <contact>6362762260</contact>
+       <department>EEE</department>
+    </employee>
+     <employee eid="e4" admin="false">
+       <name>Pranu</name>
+       <contact>9164768473</contact>
+       <department>EEE</department>
+    </employee>
+</employees>

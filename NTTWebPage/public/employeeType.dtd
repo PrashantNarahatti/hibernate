@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT employees (employee+)>
+<!ELEMENT employee (name,contact,department)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT contact (#PCDATA)>
+<!ELEMENT department (#PCDATA)>
+<!ATTLIST employee eid ID #REQUIRED>
+<!ATTLIST employee admin (true|false) "false">
